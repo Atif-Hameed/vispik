@@ -1,0 +1,6 @@
+/* Accordion */
+.answer_wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height ease 0.6s;
+}

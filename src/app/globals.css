@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-primary: #00FEB5;
+    --color-secondary: #D4D4D4;
+    --color-bg: #ffffff;
+    --color-darkBg: #292D31;
+    --color-lightDark: #30353A;
+    --color-border: #3C4045;
+    --color-lightBg: #E5E5E5;
+}
+
+.dark {
+    --color-primary: #00FEB5;
+    --color-secondary: #000000;
+    --color-bg: #292D31;
+    --color-darkBg: #292D31;
+    --color-lightDark: #30353A;
+    --color-border: #3C4045;
+    --color-lightBg: #E5E5E5;
+}
+
+.btnBg {
+    border-top: 2px solid;
+    border-image: linear-gradient(90deg, rgba(0, 254, 181, 0) 0%, #00FEB5 24.5%, #00FEB5 49%, #00FEB5 72.5%, rgba(0, 254, 181, 0) 100%);
+    border-image-slice: 1;
+}
+
+.lightBtnBg {
+    border-top: 2px solid;
+    border-image: linear-gradient(90deg, rgba(0, 254, 181, 0) 0%, #00BF88 24.5%, #00BF88 49%, #00BF88 72.5%, rgba(0, 254, 181, 0) 100%);
+    border-image-slice: 1;
+}
+
+.inner-shadow{
+    box-shadow: inset 0px 0px 80px 0px rgba(0, 0, 0, 0.20)
+}
+
+.dataSolutionShadow{
+    box-shadow: inset 0px 0px 40px 15px rgba(41, 48, 52, 1)
+}
+
+.historicalDataCardShadow{
+    box-shadow: 0px 0px 10px 0px rgba(0, 254, 181, 1)
+}
+
+.historicalDataCardShadowLight{
+    box-shadow: 0px 0px 10px 0px rgba(0, 191, 136, 1)
+}
+
+/* Modal */
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.modal {
+    animation: modal-appear 0.3s ease-out;
+}
+
+@keyframes modal-appear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* DatePicker */
+.react-datepicker {
+    @apply !border-none !rounded-xl;
+}
+
+.react-datepicker__month-container,
+.react-datepicker__header,
+.react-datepicker__header--custom {
+    @apply !w-full dark:!bg-darkBg !bg-[#E5E5E5] !text-white !rounded-md;
+}
+
+.react-datepicker__month-container {
+    @apply !px-3 !py-2
+}
+
+.react-datepicker__day {
+    @apply dark:!text-white !text-bg dark:!bg-bg bg-[#F5F5F5] !rounded-md !font-medium;
+}
+
+.react-datepicker__day-name{
+    @apply dark:!text-white !text-bg !font-medium;
+}
+
+.react-datepicker__day:hover {
+    @apply !text-black !bg-gray-400;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__day--selected {
+    @apply dark:!bg-primary !bg-darkGreen dark:!text-bg !text-white !rounded-md;
+}
+
+.react-datepicker__day--outside-month,
+.react-datepicker__day--weekend {
+    @apply !opacity-20 !bg-transparent;
+}
+
+/* Custom Scrollbar */
+.customScrollbar::-webkit-scrollbar {
+    height: 8px;
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+    background: #30353A;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb {
+    background: #D4D4D4;
+    border-radius: 100px;
+}
+
+.customScrollbarLight::-webkit-scrollbar {
+    height: 8px;
+}
+
+.customScrollbarLight::-webkit-scrollbar-track {
+    background: #E5E5E5;
+}
+
+.customScrollbarLight::-webkit-scrollbar-thumb {
+    background: #707070;
+    border-radius: 100px;
+}
+
+.customScrollbarVertical::-webkit-scrollbar {
+    width: 8px;
+}
+
+.customScrollbarVertical::-webkit-scrollbar-track {
+    background: #30353A;
+}
+
+.customScrollbarVertical::-webkit-scrollbar-thumb {
+    height: 5rem;
+    background: #D4D4D4;
+    border-radius: 100px;
+}
+
+.customScrollbarVerticalLight::-webkit-scrollbar {
+    width: 8px;
+}
+
+.customScrollbarVerticalLight::-webkit-scrollbar-track {
+    background: #D4D4D4;
+}
+
+.customScrollbarVerticalLight::-webkit-scrollbar-thumb {
+    height: 5rem;
+    background: #30353A;
+    border-radius: 100px;
+}
+
+.select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.25977 1.33813L5.72461 5.80298L10.1895 1.33813' stroke='%2300FEB5' stroke-width='2.38125' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: center;
+}
+
+.selectLight{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.25977 1.33813L5.72461 5.80298L10.1895 1.33813' stroke='%2300BF88' stroke-width='2.38125' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: center;
+}
+
+.responsive-player {
+    height: 100%;
+    width: 100%;
+  }
+  
+  @media (min-width: 1280px) {
+    .responsive-player {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 1023px) and (max-width: 1279px) {
+    .responsive-player {
+      height: 95%;
+      width: 95%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .responsive-player {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+
+
+  .react-datepicker__day.custom-colors {
+    color: #c0c0c0 !important;
+    background-color: inherit !important;
+    pointer-events: none !important;
+  }
+  
+  /* Targeting the disabled days with .react-datepicker__day--disabled */
+  .react-datepicker__day.react-datepicker__day--disabled.custom-colors {
+    color: #c0c0c077 !important;
+    background-color: inherit !important;
+    pointer-events: none !important;
+  }
+
+
+
+  
+  
